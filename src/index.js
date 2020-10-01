@@ -7,13 +7,21 @@ import {
 	Route,
 } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import { StateProvider } from './components/StateProvider/StateProvider';
+import reducer, { initialState } from './reducer';
 
 ReactDOM.render(
 	<Router>
 		<React.StrictMode>
-			<Route
-				render={({ history }) => <App history={history} />}
-			/>
+			<StateProvider
+				initialState={initialState}
+				reducer={reducer}>
+				<Route
+					render={({ history }) => (
+						<App history={history} />
+					)}
+				/>
+			</StateProvider>
 		</React.StrictMode>
 	</Router>,
 	document.getElementById('root')
