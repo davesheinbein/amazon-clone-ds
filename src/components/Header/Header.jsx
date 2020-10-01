@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider/StateProvider';
 
 function Header() {
-	const [{ basket }, dsipatch] = useStateValue();
+	const [{ basket }] = useStateValue();
 
 	return (
 		<div className='header'>
@@ -22,7 +22,6 @@ function Header() {
 				<input
 					type='text'
 					className='header__searchInput'
-					type='text'
 				/>
 				<SearchIcon className='header__searchIcon' />
 			</div>

@@ -3,9 +3,7 @@ import { useStateValue } from '../StateProvider/StateProvider';
 import './style/Product.css';
 
 function Product({ id, title, image, price, rating }) {
-	const [{ basket }, dispatch] = useStateValue();
-
-	console.log(basket, '<< basket');
+	const [dispatch] = useStateValue();
 
 	const addToBasket = () => {
 		//
@@ -32,11 +30,15 @@ function Product({ id, title, image, price, rating }) {
 					{Array(rating)
 						.fill()
 						.map((_, i) => (
-							<p>⭐</p>
+							<p>
+								<span role='img' aria-label='star'>
+									⭐
+								</span>
+							</p>
 						))}
 				</div>
 			</div>
-			<img src={image} alt='Product Image' />
+			<img src={image} alt='Product' />
 			<button onClick={addToBasket}>Add to Basket</button>
 		</div>
 	);
