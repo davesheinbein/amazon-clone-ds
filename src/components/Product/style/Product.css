@@ -35,6 +35,10 @@
   display: flex;
 }
 
+.product__rating p {
+  margin: 0 1px;
+}
+
 .product > button {
   background-color: #f0c14b;
   border: 1px solid;

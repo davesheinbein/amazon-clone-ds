@@ -20,6 +20,9 @@
 
 .product__rating {
 	display: flex;
+	p {
+		margin: 0 1px;
+	}
 }
 
 .product > button {

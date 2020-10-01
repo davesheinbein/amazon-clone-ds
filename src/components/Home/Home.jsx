@@ -13,17 +13,20 @@ function Home() {
 				/>
 
 				<div className='home__row'>
-					<Product />
-					<Product />
+					<Product
+						title='Razor'
+						price={59.99}
+						image='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1mE54JuMyrOSqL4_0lGVcn3nHGM_RttkuC_qopuTtiHf9Dm6ESK0b-hEHEcZyjOvskZHfCLVa&usqp=CAc'
+						rating={5}
+					/>
+					{/* <Product /> */}
 				</div>
 				<div className='home__row'>
+					{/* <Product />
 					<Product />
-					<Product />
-					<Product />
+					<Product /> */}
 				</div>
-				<div className='home__row'>
-					<Product />
-				</div>
+				<div className='home__row'>{/* <Product /> */}</div>
 			</div>
 		</div>
 	);
