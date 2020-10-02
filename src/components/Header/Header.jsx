@@ -52,6 +52,7 @@ function Header() {
 						<div
 							className='header__option'
 							onClick={handleAuthentication}>
+							{/* {user?.email || 'Guest,'}  alternative way of doing the same thing as below */}
 							<span className='header__optionLineOne'>
 								Hello {!user ? 'Guest,' : user.email}
 							</span>

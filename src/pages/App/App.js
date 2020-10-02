@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react';
+// Components
 import Header from '../../components/Header/Header';
 import Home from '../../components/Home/Home';
 import Login from '../../components/Login/Login';
-import { Switch, Route } from 'react-router-dom';
-import './style/App.css';
 import Checkout from '../../components/Checkout/Checkout';
-import { auth } from '../../firebase';
-import { useStateValue } from '../../components/StateProvider/StateProvider';
-import Footer from '../../components/Footer/Footer';
+import Payment from '../../components/Payment/Payment';
 import InProgress from '../../components/InProgress/InProgress';
+import Footer from '../../components/Footer/Footer';
+// Routing
+import { Switch, Route } from 'react-router-dom';
+// User Auth
+import { auth } from '../../firebase';
+// Redux
+import { useStateValue } from '../../components/StateProvider/StateProvider';
+// Style
+import './style/App.css';
 
 function App() {
 	const [{}, dispatch] = useStateValue();
@@ -48,6 +54,10 @@ function App() {
 				<Route exact path='/checkout'>
 					<Header />
 					<Checkout />
+				</Route>
+				<Route exact path='/payment'>
+					<Header />
+					<Payment />
 				</Route>
 				<Route exact path='/'>
 					<Header />
