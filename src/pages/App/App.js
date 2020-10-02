@@ -7,6 +7,7 @@ import './style/App.css';
 import Checkout from '../../components/Checkout/Checkout';
 import { auth } from '../../firebase';
 import { useStateValue } from '../../components/StateProvider/StateProvider';
+import Footer from '../../components/Footer/Footer';
 
 function App() {
 	const [{}, dispatch] = useStateValue();
@@ -47,6 +48,7 @@ function App() {
 					<Home />
 				</Route>
 			</Switch>
+			<Footer />
 		</div>
 	);
 }
