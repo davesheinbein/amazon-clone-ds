@@ -15,7 +15,7 @@ function Header() {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 100) {
 				handleShow(true);
-			} else handleShow(true);
+			} else handleShow(false);
 		});
 		return () => {
 			window.removeEventListener('scroll');
@@ -53,7 +53,7 @@ function Header() {
 							className='header__option'
 							onClick={handleAuthentication}>
 							<span className='header__optionLineOne'>
-								Hello Guest,
+								Hello {!user ? 'Guest,' : user.email}
 							</span>
 							<span className='header__optionLineTwo'>
 								{user ? 'Sign Out' : 'Sign In'}
@@ -99,7 +99,9 @@ function Header() {
 					</div>
 				</div>
 				<div
-					className={`nav ${show && 'subHeader__links'}`}>
+					className={`subHeader__links ${
+						show && 'subHeader__links'
+					}`}>
 					<Link to='/inProgress'>
 						<span className='subHeader__link'>
 							Today's Deals
