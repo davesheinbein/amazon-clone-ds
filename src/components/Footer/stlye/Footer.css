@@ -1,4 +1,10 @@
 .footer {
+  position: relative;
+  height: auto;
+  width: 100vw;
+}
+
+.footer_row {
   background: #1e2432;
   display: -webkit-box;
   display: -ms-flexbox;

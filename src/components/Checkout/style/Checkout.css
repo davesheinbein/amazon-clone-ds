@@ -7,6 +7,7 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  min-height: 80vh;
 }
 
 .checkout__ad {

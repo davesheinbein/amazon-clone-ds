@@ -1,1 +1,5 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+/*# sourceMappingURL=App.css.map */

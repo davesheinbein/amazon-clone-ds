@@ -15,7 +15,7 @@ function Header() {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 100) {
 				handleShow(true);
-			} else handleShow(false);
+			} else handleShow(true);
 		});
 		return () => {
 			window.removeEventListener('scroll');

@@ -2,6 +2,13 @@
 	margin: 0;
 }
 
+html,
+body {
+	height: 100%;
+	position: relative;
+}
+
+
 body {
 	background-color: rgb(234, 237, 237);
 	margin: 0;
@@ -12,7 +19,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	&::-webkit-scrollbar {
 		width: 0px;
-		background: transparent; 
+		background: transparent;
 	}
 }
 
@@ -20,3 +27,4 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas,
 		'Courier New', monospace;
 }
+

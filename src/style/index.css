@@ -2,6 +2,12 @@
   margin: 0;
 }
 
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
 body {
   background-color: #eaeded;
   margin: 0;
