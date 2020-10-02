@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import RoomIcon from '@material-ui/icons/Room';
 import './style/Header.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider/StateProvider';
@@ -8,6 +9,18 @@ import { auth } from '../../firebase';
 
 function Header() {
 	const [{ basket, user }] = useStateValue();
+	const [show, handleShow] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 100) {
+				handleShow(true);
+			}
+		});
+		return () => {
+			window.removeEventListener('scroll');
+		};
+	}, []);
 
 	const handleAuthentication = () => {
 		if (user) {
@@ -16,62 +29,91 @@ function Header() {
 	};
 
 	return (
-		<div className='header'>
-			<Link to='/'>
-				<img
-					src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
-					alt='Amazon logo'
-					className='header__logo'
-				/>
-			</Link>
+		<>
+			<div className='header'>
+				<Link to='/'>
+					<img
+						src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+						alt='Amazon logo'
+						className='header__logo'
+					/>
+				</Link>
 
-			<div className='header__search'>
-				<input
-					type='text'
-					className='header__searchInput'
-				/>
-				<SearchIcon className='header__searchIcon' />
-			</div>
+				<div className='header__search'>
+					<input
+						type='text'
+						className='header__searchInput'
+					/>
+					<SearchIcon className='header__searchIcon' />
+				</div>
 
-			<div className='header__nav'>
-				<Link to={!user && '/login'}>
-					<div
-						className='header__option'
-						onClick={handleAuthentication}>
+				<div className='header__nav'>
+					<Link to={!user && '/login'}>
+						<div
+							className='header__option'
+							onClick={handleAuthentication}>
+							<span className='header__optionLineOne'>
+								Hello Guest,
+							</span>
+							<span className='header__optionLineTwo'>
+								{user ? 'Sign Out' : 'Sign In'}
+							</span>
+						</div>
+					</Link>
+					<div className='header__option'>
 						<span className='header__optionLineOne'>
-							Hello Guest,
+							Returns
 						</span>
 						<span className='header__optionLineTwo'>
-							{user ? 'Sign Out' : 'Sign In'}
+							Orders
+						</span>
+					</div>
+					<div className='header__option'>
+						<span className='header__optionLineOne'>
+							Your
+						</span>
+						<span className='header__optionLineTwo'>
+							Prime
+						</span>
+					</div>
+				</div>
+				<Link to='/checkout'>
+					<div className='header__optionBasket'>
+						<ShoppingBasketIcon />
+						<span className='header__optionLineTwo header__basketCount'>
+							{basket?.length}
 						</span>
 					</div>
 				</Link>
-				<div className='header__option'>
-					<span className='header__optionLineOne'>
-						Returns
-					</span>
-					<span className='header__optionLineTwo'>
-						Orders
-					</span>
+			</div>
+			<div className='subHeader'>
+				<div className='subHeader__container'>
+					<RoomIcon />
+					<div className='subHeader__option'>
+						<span className='subHeader__optionLineOne'>
+							Delivert to
+						</span>
+						<span className='subHeader__optionLineTwo'>
+							USA
+						</span>
+					</div>
 				</div>
-				<div className='header__option'>
-					<span className='header__optionLineOne'>
-						Your
+				<div
+					className={`nav ${show && 'subHeader__links'}`}>
+					<span className='subHeader__link'>
+						Today's Deals
 					</span>
-					<span className='header__optionLineTwo'>
-						Prime
+					<span className='subHeader__link'>
+						Customer Service
 					</span>
+					<span className='subHeader__link'>
+						Gift Cards
+					</span>
+					<span className='subHeader__link'>Registry</span>
+					<span className='subHeader__link'>Sell</span>
 				</div>
 			</div>
-			<Link to='/checkout'>
-				<div className='header__optionBasket'>
-					<ShoppingBasketIcon />
-					<span className='header__optionLineTwo header__basketCount'>
-						{basket?.length}
-					</span>
-				</div>
-			</Link>
-		</div>
+		</>
 	);
 }
 

@@ -11,6 +11,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  -webkit-box-shadow: 0px 1px 5px #000;
+          box-shadow: 0px 1px 5px #000;
 }
 
 .header__logo {
@@ -92,5 +94,71 @@
   margin-left: 10px;
   margin-right: 10px;
   color: white;
+}
+
+.subHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #242a3b;
+  top: 20;
+  width: 100%;
+  padding: 0.25em 0em;
+  z-index: 1;
+  display: flex;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.subHeader__container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5em 1em;
+}
+
+.subHeader__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.subHeader__optionLineOne {
+  font-size: 10px;
+}
+
+.subHeader__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.subHeader__links {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subHeader__link {
+  color: #dddddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  margin: 0em 0.5em;
+  text-shadow: 0px 3px 3px #000;
 }
 /*# sourceMappingURL=Header.css.map */

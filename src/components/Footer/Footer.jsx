@@ -18,13 +18,10 @@ function Footer() {
 					<div className='footer__title'>
 						Get To Know Us
 					</div>
+					<div className='footer__links'>Careers</div>
+					<div className='footer__links'>Blog</div>
+					<div className='footer__links'>About Amazon</div>
 					<div className='footer__links'>
-						Careers
-						<br />
-						Blog
-						<br />
-						About Amazon
-						<br />
 						Amazon Devices
 					</div>
 				</div>
@@ -34,57 +31,61 @@ function Footer() {
 					</div>
 					<div className='footer__links'>
 						Sell on Amazon
-						<br />
+					</div>
+					<div className='footer__links'>
 						Sell on Amazon Business
-						<br />
+					</div>
+					<div className='footer__links'>
 						Sell Your Apps on Amazon
-						<br />
+					</div>
+					<div className='footer__links'>
 						Become an Affiliate
-						<br />
+					</div>
+					<div className='footer__links'>
 						Advertise Your Products
-						<br />
+					</div>
+					<div className='footer__links'>
 						Self-Publish with Us
 						<br />
+					</div>
+					<div className='footer__links'>
 						Host an Amazon Hub
 					</div>
 				</div>
 				<div className='footer__column'>
 					<div className='footer__title'>
-						Amazon Payment Products
+						Amazon Business Card
+					</div>
+					<div className='footer__title'>
+						Shop with Points
 					</div>
 					<div className='footer__links'>
-						Amazon Business Card
-						<br />
-						Shop with Points
-						<br />
 						Reload your Balance
-						<br />
+					</div>
+					<div className='footer__links'>
 						Amazon Currency Converter
 					</div>
 				</div>
 				<div className='footer__column'>
 					<div className='footer__title'>
-						Let Us Help You
+						Amazon and Covid-19
+					</div>
+					<div className='footer__title'>Your Account</div>
+					<div className='footer__title'>Your Orders</div>
+					<div className='footer__links'>
+						Shipping Rates & Policies
+					</div>
+					<div className='footer__links'>Amazon Prime</div>
+					<div className='footer__links'>
+						Returns & Replacements
 					</div>
 					<div className='footer__links'>
-						Amazon and Covid-19
-						<br />
-						Your Account
-						<br />
-						Your Orders
-						<br />
-						Shipping Rates & Policies
-						<br />
-						Amazon Prime
-						<br />
-						Returns & Replacements
-						<br />
 						Manage Your Content & Devices
-						<br />
-						Amazon Assistant
-						<br />
-						Help
 					</div>
+					<div className='footer__links'>
+						Amazon Assistant
+					</div>
+					<div className='footer__links'>Help</div>
 				</div>
 			</div>
 		</>
