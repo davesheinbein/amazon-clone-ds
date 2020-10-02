@@ -13,8 +13,17 @@ import { Switch, Route } from 'react-router-dom';
 import { auth } from '../../firebase';
 // Redux
 import { useStateValue } from '../../components/StateProvider/StateProvider';
+// Stripe
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 // Style
 import './style/App.css';
+
+// Stripe Publishable key https://dashboard.stripe.com/test/apikeys
+// promise that compiles and load stripe based on Key
+const promise = loadStripe(
+	'pk_test_51HXuryAGYh1gFsygAcbMQ6nNumpmFOFhQIUvLsoqKk1Z30xYMV6DAiPtjekVGt8fOo92Iu8oP4E2fNRP21hfi0rm00KGWwWewI'
+);
 
 function App() {
 	const [{}, dispatch] = useStateValue();
@@ -22,7 +31,7 @@ function App() {
 	// will run one when app component loads
 	useEffect(() => {
 		auth.onAuthStateChanged((authUser) => {
-			console.log(authUser, '<< authUser');
+			// console.log(authUser, '<< authUser');
 
 			if (authUser) {
 				// the use just loggedIn / was loggedIn
@@ -57,7 +66,13 @@ function App() {
 				</Route>
 				<Route exact path='/payment'>
 					<Header />
-					<Payment />
+					{/* Payment component is nested within the Elements */}
+					{/* imported from @stripe/react-stripe-js */}
+					{/* promise is defined above with */}
+					{/* loadStripe imported from @stripe/stripe-js*/}
+					<Elements stripe={promise}>
+						<Payment />
+					</Elements>
 				</Route>
 				<Route exact path='/'>
 					<Header />
