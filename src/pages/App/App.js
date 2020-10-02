@@ -8,6 +8,7 @@ import Checkout from '../../components/Checkout/Checkout';
 import { auth } from '../../firebase';
 import { useStateValue } from '../../components/StateProvider/StateProvider';
 import Footer from '../../components/Footer/Footer';
+import InProgress from '../../components/InProgress/InProgress';
 
 function App() {
 	const [{}, dispatch] = useStateValue();
@@ -36,6 +37,10 @@ function App() {
 	return (
 		<div className='app'>
 			<Switch>
+				<Route exact path='/inProgress'>
+					<Header />
+					<InProgress />
+				</Route>
 				<Route exact path='/login'>
 					<Login />
 				</Route>

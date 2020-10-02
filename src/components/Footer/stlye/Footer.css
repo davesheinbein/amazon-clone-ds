@@ -1,9 +1,11 @@
 .footer {
-  width: 100%;
   background: #1e2432;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2em;
 }
 

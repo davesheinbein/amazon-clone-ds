@@ -9,13 +9,13 @@ import { auth } from '../../firebase';
 
 function Header() {
 	const [{ basket, user }] = useStateValue();
-	const [show, handleShow] = useState(false);
+	const [show, handleShow] = useState(true);
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 100) {
 				handleShow(true);
-			}
+			} else handleShow(false);
 		});
 		return () => {
 			window.removeEventListener('scroll');
@@ -100,17 +100,29 @@ function Header() {
 				</div>
 				<div
 					className={`nav ${show && 'subHeader__links'}`}>
-					<span className='subHeader__link'>
-						Today's Deals
-					</span>
-					<span className='subHeader__link'>
-						Customer Service
-					</span>
-					<span className='subHeader__link'>
-						Gift Cards
-					</span>
-					<span className='subHeader__link'>Registry</span>
-					<span className='subHeader__link'>Sell</span>
+					<Link to='/inProgress'>
+						<span className='subHeader__link'>
+							Today's Deals
+						</span>
+					</Link>
+					<Link to='/inProgress'>
+						<span className='subHeader__link'>
+							Customer Service
+						</span>
+					</Link>
+					<Link to='/inProgress'>
+						<span className='subHeader__link'>
+							Gift Cards
+						</span>
+					</Link>
+					<Link to='/inProgress'>
+						<span className='subHeader__link'>
+							Registry
+						</span>
+					</Link>
+					<Link to='/inProgress'>
+						<span className='subHeader__link'>Sell</span>
+					</Link>
 				</div>
 			</div>
 		</>
