@@ -6,7 +6,9 @@
 
 ### About Us
 
-<!-- ##### Front-End UI interface Netflix Clone.Deployed to Firebase utilizing MovieDB, movie-trailer, react-youtube, and more. -->
+##### Amazon Clone built utilizing React, Redux, SASS, and more. Deployed to Firebase.
+
+<!-- Payment done through Stripe -->
 
 #### Project Work:
 
@@ -18,9 +20,17 @@
 
 ## Screenshot:
 
-<!-- ![Home Page Sceenshot](screenshots/netflixCloneScreenshot.png) -->
+![Home Page Sceenshot](screenshots/homeScreenshot.png)
 
-<!-- [Home Page Sceenshot](https://imgur.com/JJOS0gh) -->
+[Home Page Sceenshot](https://imgur.com/cRRHZsT)
+
+![Checkout Page Sceenshot](screenshots/checkoutScreenshot.png)
+
+[Checkout Page Sceenshot](https://imgur.com/vEj0yG3)
+
+![Home Page Sceenshot](screenshots/signInScreenshot.png)
+
+[Home Page Sceenshot](https://imgur.com/reJKwYe)
 
 ## Technologies Used:
 
@@ -32,19 +42,17 @@
 
 ##### 4. JavaScript
 
-<!-- ##### 5. Axios
+##### 5. Stripe
 
-##### 6. movie-trailer
+##### 6. Redux
 
-##### 7. react-youtube -->
+##### 7 . React
 
-##### 8. React
+##### 8. Node.js
 
-##### 9. Node.js
+##### 9. Firebase
 
-##### 10. Firebase
-
-##### 11. Git
+##### 10. Git
 
 ## Potential Next Steps:
 

@@ -10,6 +10,10 @@ body {
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	&::-webkit-scrollbar {
+		width: 0px;
+		background: transparent; 
+	}
 }
 
 code {

@@ -4,7 +4,7 @@ import './style/Product.css';
 
 function Product({ id, title, image, price, rating }) {
 	// dispatched from the reducer that is pushed down throw the state provider
-	const [dispatch] = useStateValue();
+	const [state, dispatch] = useStateValue();
 
 	// this defines a function that adds items to a basket
 	const addToBasket = () => {
