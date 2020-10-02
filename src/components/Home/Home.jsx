@@ -1,3 +1,4 @@
+import Slider from '../Slider/Slider';
 import React from 'react';
 import Product from '../Product/Product';
 import './style/Home.css';
@@ -6,11 +7,12 @@ function Home() {
 	return (
 		<div className='home' id='#top'>
 			<div className='home__container'>
-				<img
-					src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'
+				{/* <img
+					src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonMusic/2020/ACQ/Evergreen/FreeTier/US-EN_052120_FreeTier_ACQ_GW_Hero_D_3000x1200_CV12._CB410067483_.jpg'
 					alt='Home'
 					className='home__image'
-				/>
+				/> */}
+				<Slider />
 
 				<div className='home__row'>
 					<Product
