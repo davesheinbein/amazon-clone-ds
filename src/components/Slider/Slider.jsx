@@ -35,7 +35,7 @@ function Slider(props) {
 
 	return (
 		<Carousel
-			interval={5000}
+			interval={10000}
 			animation='slide'
 			indicators={false}
 			navButtonsAlwaysVisible={true}
