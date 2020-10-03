@@ -58,8 +58,8 @@ function Payment() {
 		getClientSecret();
 	}, [basket]);
 
-	console.log(clientSecret, '<<< clientSecret');
-	console.log(user, '<<< user');
+	// console.log(clientSecret, '<<< clientSecret');
+	// console.log(user, '<<< user');
 
 	// Handles Stripe submission
 	const handleSubmit = async (e) => {
@@ -164,7 +164,10 @@ function Payment() {
 					<div className='payment__details'>
 						{/* strips stuff */}
 						<form onSubmit={handleSubmit}>
-							<CardElement onChange={handleChange} />
+							<CardElement
+								onChange={handleChange}
+								className='payment__card'
+							/>
 							<div className='payment__priceContainer'>
 								{/* Renders out the final price */}
 								<CurrencyFormat

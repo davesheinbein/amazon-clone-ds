@@ -6,9 +6,9 @@
 
 ### About Us
 
-##### Amazon Clone built utilizing React, Redux, SASS, and more. Deployed to Firebase.
+##### Amazon Clone built utilizing React, Redux, SASS, and more. Deployed to Firebase utilizing Firebase database and user authentication. Backend built using Firebase and Axios. Payment processing built using Stripe.
 
-<!-- Payment done through Stripe -->
+###### For testing purposes: Enter 42424242... in all of the credit card fields for payment to be processed.
 
 #### Project Work:
 
@@ -22,15 +22,31 @@
 
 ![Home Page Sceenshot](screenshots/homeScreenshot.png)
 
-[Home Page Sceenshot](https://imgur.com/cRRHZsT)
+[Home Page Sceenshot](https://imgur.com/xvHRbqP)
+
+![Cart Page Sceenshot](screenshots/cartScreenshot.png)
+
+[Cart Page Sceenshot](https://imgur.com/w7GxWb2)
 
 ![Checkout Page Sceenshot](screenshots/checkoutScreenshot.png)
 
-[Checkout Page Sceenshot](https://imgur.com/vEj0yG3)
+[Checkout Page Sceenshot](https://imgur.com/J0MKHsD)
 
-![Home Page Sceenshot](screenshots/signInScreenshot.png)
+![Orders Page Sceenshot](screenshots/ordersScreenshot.png)
 
-[Home Page Sceenshot](https://imgur.com/reJKwYe)
+[Orders Page Sceenshot](https://imgur.com/3fGUIFf)
+
+![inProgress Page Sceenshot](screenshots/inprogressScreenshot.png)
+
+[inProgress Page Sceenshot](https://imgur.com/Uwssfth)
+
+![Login/SignUp Page Sceenshot](screenshots/signInScreenshot.png)
+
+[Login/SignUp Page Sceenshot](https://imgur.com/4kh8bTo)
+
+![Stripe payments processed Sceenshot](screenshots/stripePaymentsScreenshot.png)
+
+[Stripe payments processed Sceenshot](https://imgur.com/reJKwYe)
 
 ## Technologies Used:
 
