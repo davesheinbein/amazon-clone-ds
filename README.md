@@ -24,19 +24,19 @@
 
 ![Home Page Sceenshot](screenshots/homeScreenshot.png)
 
-[Home Page Sceenshot](https://imgur.com/xvHRbqP)
+[Home Page Sceenshot](https://imgur.com/GKAQjCW)
 
 ![Cart Page Sceenshot](screenshots/cartScreenshot.png)
 
-[Cart Page Sceenshot](https://imgur.com/w7GxWb2)
+[Cart Page Sceenshot](https://imgur.com/0olVfsm)
 
 ![Checkout Page Sceenshot](screenshots/checkoutScreenshot.png)
 
-[Checkout Page Sceenshot](https://imgur.com/J0MKHsD)
+[Checkout Page Sceenshot](https://imgur.com/AFKJ7Y0)
 
 ![Orders Page Sceenshot](screenshots/ordersScreenshot.png)
 
-[Orders Page Sceenshot](https://imgur.com/3fGUIFf)
+[Orders Page Sceenshot](https://imgur.com/eYjR2Iw)
 
 ![inProgress Page Sceenshot](screenshots/inprogressScreenshot.png)
 
@@ -76,7 +76,7 @@
 
 ##### 10. Firebase Database
 
-##### 11. Firebase Authentication 
+##### 11. Firebase Authentication
 
 ##### 12. CurrencyFormat
 
