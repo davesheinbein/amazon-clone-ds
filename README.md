@@ -6,7 +6,9 @@
 
 ### About Us
 
-##### Amazon Clone built utilizing React, Redux, SASS, and more. Deployed to Firebase utilizing Firebase database and user authentication. Backend built using Firebase and Axios. Payment processing built using Stripe.
+##### Amazon Clone built utilizing React, Redux, SASS, and more. Deployed to Firebase utilizing Firebase database and user authentication. Backend built using Firebase and Axios.
+
+##### Payment processing built using Stripe. You can see that some payments have been processed below in the payment processing screenshot.
 
 ###### For testing purposes: Enter 42424242... in all of the credit card fields for payment to be processed.
 
