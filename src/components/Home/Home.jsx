@@ -20,14 +20,14 @@ function Home() {
 						title='Lacoste Mens Lerond Bl 1 Fashion Sneaker'
 						price={69.99}
 						rating={5}
-						image='https://m.media-amazon.com/images/I/61e-8ZpJD-L._AC_UL640_FMwebp_QL65_.jpg'
+						image='https://images-na.ssl-images-amazon.com/images/I/61e-8ZpJD-L._AC_UL640_FMwebp_QL65_.jpg'
 					/>
 					<Product
 						id='12311215'
 						title='Razor A Kick Scooter'
 						price={29.98}
 						rating={4}
-						image='https://m.media-amazon.com/images/I/71tJv0xuvDL._AC_UL640_FMwebp_QL65_.jpg'
+						image='https://images-na.ssl-images-amazon.com/images/I/71tJv0xuvDL._AC_UL640_FMwebp_QL65_.jpg'
 					/>
 				</div>
 				<div className='home__row'>
@@ -36,12 +36,12 @@ function Home() {
 						title='BIBO 3D Printer Dual Extruder Sturdy Frame WiFi Touch Screen Cut Printing Time in Half Filament Detect'
 						price={599.99}
 						rating={4}
-						image='https://m.media-amazon.com/images/I/61DBVpOnoPL._AC_UY436_FMwebp_QL65_.jpg'
+						image='https://images-na.ssl-images-amazon.com/images/I/61DBVpOnoPL._AC_UY436_FMwebp_QL65_.jpg'
 					/>
 					<Product
 						id='12321'
-						title='Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Upto 2500 DPI 
-                    Upto 250 hours of battery life'
+						title='Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Up to 2500 DPI 
+								Up to 250 hours of battery life'
 						price={199.99}
 						rating={4}
 						image='https://images-na.ssl-images-amazon.com/images/I/81ZQgWwuVzL._AC_SY741_.jpg'
@@ -49,7 +49,7 @@ function Home() {
 					<Product
 						id='12321'
 						title='Samsung 860 EVO 500GB 2.5 Inch SATA III Internal SSD (MZ-76E500B/AM)'
-						price={180}
+						price={189.99}
 						rating={3}
 						image='https://images-na.ssl-images-amazon.com/images/I/814poe%2BIDsL._AC_SX679_.jpg'
 					/>
@@ -60,7 +60,7 @@ function Home() {
 						title='Microsoft Xbox One X 1TB, 4K Ultra HD Gaming Console, Black (Renewed) (2017 Model)'
 						price={299.99}
 						rating={5}
-						image='https://m.media-amazon.com/images/I/61OUjGDvtLL._AC_UY436_FMwebp_QL65_.jpg'
+						image='https://images-na.ssl-images-amazon.com/images/I/61OUjGDvtLL._AC_UY436_FMwebp_QL65_.jpg'
 					/>
 				</div>
 			</div>
