@@ -50,6 +50,10 @@
 
 [Stripe payments processed Sceenshot](https://imgur.com/reJKwYe)
 
+![Stripe payments graph Sceenshot](screenshots/stripePaymentsGraphScreenshot.png)
+
+[Stripe payments graph Sceenshot](https://imgur.com/qLxgK1X)
+
 ## Technologies Used:
 
 ##### 1. HTML5
