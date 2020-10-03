@@ -84,7 +84,7 @@
 
 ## Potential Next Steps:
 
-##### - [] Update CSS further for additional media queries
+##### - [X] Update CSS further to make responsive on all size screens
 
 ### Click the link to view David Sheinbeins Portfolio website
 
