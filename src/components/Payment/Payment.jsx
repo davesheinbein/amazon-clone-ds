@@ -180,6 +180,11 @@ function Payment() {
 									thousandSeperator={true}
 									prefix={'$'}
 								/>
+								<div className='payment__note'>
+									For testing purposes: Enter 42424242... in
+									all of the credit card fields for payment
+									to be processed.
+								</div>
 								<button
 									disabled={
 										processing || disabled || succeeded

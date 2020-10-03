@@ -1,8 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
-import './style/Order.css';
+// formats currency
 import CurrencyFormat from 'react-currency-format';
+import './style/Order.css';
 
 function Order({ order }) {
 	return (

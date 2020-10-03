@@ -68,13 +68,19 @@
 
 ##### 6. Redux
 
-##### 7 . React
+##### 7. React
 
 ##### 8. Node.js
 
 ##### 9. Firebase
 
-##### 10. Git
+##### 10. Firebase Database
+
+##### 11. Firebase Authentication 
+
+##### 12. CurrencyFormat
+
+##### 13. Git
 
 ## Potential Next Steps:
 

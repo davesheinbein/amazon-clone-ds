@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { db, auth } from '../../firebase';
+import { useHistory } from 'react-router-dom';
+import { auth } from '../../firebase';
 import './style/Login.css';
 
 function Login() {
@@ -8,8 +8,8 @@ function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
-    // console.log('Login -> email', email);
-    // console.log('Login -> password', password);
+	// console.log('Login -> email', email);
+	// console.log('Login -> password', password);
 
 	const signIn = (e) => {
 		e.preventDefault();
@@ -43,14 +43,6 @@ function Login() {
 
 	return (
 		<div className='login'>
-			{/* <Link to='/'>
-				<img
-					src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png'
-					alt='login'
-					className='login__logo'
-				/>
-			</Link> */}
-
 			<div className='login__container'>
 				<h1>Sign-in</h1>
 
