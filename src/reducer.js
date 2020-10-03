@@ -62,6 +62,13 @@ const reducer = (state, action) => {
 				// dispatched in the product in this case
 				user: action.user,
 			};
+		case 'EMPTY_BASKET':
+			return {
+				// selects all state
+				...state,
+				// selects baskets sets it to empty array
+				basket: [],
+			};
 
 		default:
 			return state;

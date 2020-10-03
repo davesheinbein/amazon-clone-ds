@@ -16,6 +16,8 @@ import {
 import CurrencyFormat from 'react-currency-format';
 // axios
 import axios from '../../axios';
+// firebase
+import { db } from '../../firebase';
 // Style
 import './style/Payment.css';
 
@@ -57,6 +59,7 @@ function Payment() {
 	}, [basket]);
 
 	console.log(clientSecret, '<<< clientSecret');
+	console.log(user, '<<< user');
 
 	// Handles Stripe submission
 	const handleSubmit = async (e) => {
@@ -74,11 +77,35 @@ function Payment() {
 			.then(({ paymentIntent }) => {
 				// paymentIntent de-structured from response
 				// paymentIntent = payment confirmation via stripe
+
+				// targeting the firestore db specifically the
+				// users collection within the db
+				// looking a specific user by there uid
+				// the specifying the orders that user is attached to
+				// then selects the paymentIntent by it's id and then
+				// sets the following info
+				// paymentIntent.amount & paymentIntent.created both
+				// pull the exact amounts from stripe
+				db.collection('users')
+					.doc(user?.uid)
+					.collection('orders')
+					.doc(paymentIntent.id)
+					.set({
+						basket: basket,
+						amount: paymentIntent.amount,
+						created: paymentIntent.created,
+					});
+
+				// setting states defined above
 				setSucceeded(true);
 				setError(null);
 				setProcessing(false);
 
-				history.replaceState('/orders');
+				dispatch({
+					type: 'EMPTY_BASKET',
+				});
+
+				history.replace('/orders');
 			});
 	};
 

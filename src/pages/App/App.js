@@ -7,6 +7,7 @@ import Checkout from '../../components/Checkout/Checkout';
 import Payment from '../../components/Payment/Payment';
 import InProgress from '../../components/InProgress/InProgress';
 import Footer from '../../components/Footer/Footer';
+import Orders from '../../components/Orders/Orders';
 // Routing
 import { Switch, Route } from 'react-router-dom';
 // User Auth
@@ -51,21 +52,21 @@ function App() {
 
 	return (
 		<div className='app'>
+			<Header />
 			<Switch>
 				<Route exact path='/inProgress'>
-					<Header />
 					<InProgress />
 				</Route>
 				<Route exact path='/login'>
-					<Header />
 					<Login />
 				</Route>
+				<Route exact path='/orders'>
+					<Orders />
+				</Route>
 				<Route exact path='/checkout'>
-					<Header />
 					<Checkout />
 				</Route>
 				<Route exact path='/payment'>
-					<Header />
 					{/* Payment component is nested within the Elements */}
 					{/* imported from @stripe/react-stripe-js */}
 					{/* promise is defined above with */}
@@ -75,7 +76,6 @@ function App() {
 					</Elements>
 				</Route>
 				<Route exact path='/'>
-					<Header />
 					<Home />
 				</Route>
 			</Switch>
