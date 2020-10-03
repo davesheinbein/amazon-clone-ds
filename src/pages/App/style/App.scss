@@ -1,4 +1,11 @@
 .app {
+	width: fit-content;
 	min-height: 100vh;
 	position: relative;
+}
+
+@media screen and (min-device-width: 1496px) {
+	.app {
+		width: 100%;
+	}
 }

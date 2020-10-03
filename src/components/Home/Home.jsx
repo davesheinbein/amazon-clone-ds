@@ -37,15 +37,14 @@ function Home() {
 				<div className='home__row'>
 					<Product
 						id='12321'
-						title='BIBO 3D Printer Dual Extruder Sturdy Frame WiFi Touch Screen Cut Printing Time in Half Filament Detect'
+						title='3D Printer Dual Extruder Sturdy Frame WiFi Touch Screen'
 						price={599.99}
 						rating={4}
 						image={printer}
 					/>
 					<Product
 						id='12321'
-						title='Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Up to 2500 DPI 
-								Up to 250 hours of battery life'
+						title='Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons'
 						price={199.99}
 						rating={4}
 						image='https://images-na.ssl-images-amazon.com/images/I/81ZQgWwuVzL._AC_SY741_.jpg'

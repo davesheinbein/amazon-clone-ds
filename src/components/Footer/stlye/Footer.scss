@@ -1,7 +1,7 @@
 .footer {
 	position: relative;
 	height: auto;
-	width: 100vw;
+	width: 100%;
 }
 
 .footer_row {
@@ -12,8 +12,11 @@
 }
 
 .footer__column {
+	width: 100%;
 	color: #fff;
 	margin: 0em 2em;
+	padding-left: auto;
+	padding-right: auto;
 }
 
 .footer__title {
