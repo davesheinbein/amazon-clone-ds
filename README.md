@@ -2,11 +2,11 @@
 
 ### Click the link to view the website
 
-[Amazon Clone Webstite](https://clone-ds.web.app/)
+[Amazon Mock UI Webstite](https://clone-ds.web.app/)
 
 ### About Us
 
-##### Amazon Clone built utilizing React, Redux, SASS, and more. Deployed to Firebase utilizing Firebase database and user authentication. Backend built using Firebase and Axios.
+##### Mock Amazon UI built utilizing React, Redux, SASS, and more. Deployed to Firebase utilizing Firebase database and user authentication. Backend built using Firebase and Axios.
 
 ##### Payment processing built using Stripe. You can see that some payments have been processed below in the payment processing screenshot.
 
