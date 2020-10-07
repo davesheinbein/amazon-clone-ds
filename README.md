@@ -1,8 +1,8 @@
-# **Amazon Clone**
+# **Amazon Mock UI**
 
 ### Click the link to view the website
 
-[Amazon Mock UI Webstite](https://clone-ds.web.app/)
+[Amazon Mock UI Website](https://clone-ds.web.app/)
 
 ### About Us
 
