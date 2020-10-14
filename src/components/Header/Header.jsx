@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import RoomIcon from '@material-ui/icons/Room';
-import './style/Header.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider/StateProvider';
 import { auth } from '../../firebase';
+import fakeAmazon from '../../images/fakeAmazon.png';
+import './style/Header.css';
 
 function Header() {
 	const [{ basket, user }] = useStateValue();
@@ -33,7 +34,7 @@ function Header() {
 			<div className='header'>
 				<Link to='/'>
 					<img
-						src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+						src={fakeAmazon}
 						alt='Amazon logo'
 						className='header__logo'
 					/>
