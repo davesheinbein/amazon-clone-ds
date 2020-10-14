@@ -1,4 +1,4 @@
-# **Amazon Mock UI**
+# **Fake Amazon Mock UI**
 
 ### Click the link to view the website
 
@@ -24,19 +24,19 @@
 
 ![Home Page Sceenshot](screenshots/homeScreenshot.png)
 
-[Home Page Sceenshot](https://imgur.com/GKAQjCW)
+[Home Page Sceenshot](https://imgur.com/3Ua2jzo)
 
 ![Cart Page Sceenshot](screenshots/cartScreenshot.png)
 
-[Cart Page Sceenshot](https://imgur.com/0olVfsm)
+[Cart Page Sceenshot](https://imgur.com/hs1zr9o)
 
 ![Checkout Page Sceenshot](screenshots/checkoutScreenshot.png)
 
-[Checkout Page Sceenshot](https://imgur.com/AFKJ7Y0)
+[Checkout Page Sceenshot](https://imgur.com/DOrrH9l)
 
 ![Orders Page Sceenshot](screenshots/ordersScreenshot.png)
 
-[Orders Page Sceenshot](https://imgur.com/eYjR2Iw)
+[Orders Page Sceenshot](https://imgur.com/JEQ8Hin)
 
 ![inProgress Page Sceenshot](screenshots/inprogressScreenshot.png)
 
@@ -44,7 +44,7 @@
 
 ![Login/SignUp Page Sceenshot](screenshots/signInScreenshot.png)
 
-[Login/SignUp Page Sceenshot](https://imgur.com/4kh8bTo)
+[Login/SignUp Page Sceenshot](https://imgur.com/9KqadCr)
 
 ![Stripe payments processed Sceenshot](screenshots/stripePaymentsScreenshot.png)
 
