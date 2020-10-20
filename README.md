@@ -40,7 +40,7 @@
 
 ![inProgress Page Sceenshot](screenshots/inprogressScreenshot.png)
 
-[inProgress Page Sceenshot](https://imgur.com/Uwssfth)
+[inProgress Page Sceenshot](https://imgur.com/jx9l3Pn)
 
 ![Login/SignUp Page Sceenshot](screenshots/signInScreenshot.png)
 
