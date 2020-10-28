@@ -66,9 +66,9 @@
 
 ##### 5. Stripe
 
-##### 6. Redux
+##### 6. React
 
-##### 7. React
+##### 7. React Context API
 
 ##### 8. Node.js
 
