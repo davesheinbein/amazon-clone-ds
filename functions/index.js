@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 // To start functions
 // firebase emulators:start
-// if you want to work with the backend must also change the 
+// if you want to work with the backend must also change the
 // baseURL in axios to localhost
 
 // functions is the backend directory
@@ -8,9 +10,7 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
-const stripe = require('stripe')(
-	''
-);
+const stripe = require('stripe')(process.env.STRIPESECRET);
 
 // API
 
