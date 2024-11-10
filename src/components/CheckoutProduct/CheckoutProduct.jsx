@@ -36,7 +36,7 @@ function CheckoutProduct({
 					{Array(rating)
 						.fill()
 						.map((_, i) => (
-							<p>
+							<p key={i}>
 								<span role='img' aria-label='star'>
 									⭐
 								</span>

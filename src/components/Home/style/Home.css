@@ -1,27 +1,17 @@
 .home {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   max-width: 1500px;
 }
-
 .home .home__container {
   width: 100%;
-  display: -ms-grid;
   display: grid;
 }
-
 .home .home__container .home__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 1;
   margin-left: 5px;
   margin-right: 5px;
-}
-/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=Home.css.map */

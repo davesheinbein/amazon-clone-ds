@@ -12,7 +12,7 @@ import Orders from '../../components/Orders/Orders';
 import { Switch, Route } from 'react-router-dom';
 // User Auth
 import { auth } from '../../firebase';
-// Redux
+// Context API
 import { useStateValue } from '../../components/StateProvider/StateProvider';
 // Stripe
 import { loadStripe } from '@stripe/stripe-js';

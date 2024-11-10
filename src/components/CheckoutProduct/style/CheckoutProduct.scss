@@ -2,6 +2,8 @@
 	display: flex;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 20px;
 }
 
 .checkoutProduct__info {
@@ -15,10 +17,11 @@
 	border-color: #a88734 #9c7e31 #846a29;
 	color: #111;
 	outline: transparent;
+	transition: background 0.3s ease;
 }
 
 .checkoutProduct__info > button:hover {
-	background: rgba(240, 193, 75, 0.75);
+	background: rgba(240, 193, 75, 0.85);
 }
 
 .checkoutProduct__image {
@@ -34,4 +37,5 @@
 .checkoutProduct__title {
 	font-size: 17px;
 	font-weight: 800;
+	color: #131921;
 }

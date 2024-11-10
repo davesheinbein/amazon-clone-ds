@@ -37,12 +37,12 @@ function Payment() {
 	const [processing, setProcessing] = useState('');
 	const [error, setError] = useState(null);
 	const [disabled, setDisabled] = useState(true);
-	const [clientSecret, setClientSecret] = useState(true);
+	const [clientSecret, setClientSecret] = useState('');
 
 	useEffect(() => {
 		//generate the special stripe secret which allows us to charge a customer
 		// Whenever the basket changes it generates a new secret this will update
-		// the special stripe secret which allows to chage the customer the correct amount
+		// the special stripe secret which allows to change the customer the correct amount
 		const getClientSecret = async () => {
 			const response = await axios({
 				method: 'post',
@@ -66,6 +66,13 @@ function Payment() {
 		// e.preventDefault(); will stop it from refreshing
 		e.preventDefault();
 		setProcessing(true);
+
+		if (!clientSecret) {
+			setError('Client secret not set');
+			setProcessing(false);
+			return;
+		}
+
 		// uses the clientSecret to confirm the card payment
 		const payload = await stripe
 			.confirmCardPayment(clientSecret, {
@@ -177,18 +184,14 @@ function Payment() {
 									decimalScale={2}
 									value={getBasketTotal(basket)}
 									displayType={'text'}
-									thousandSeperator={true}
+									thousandSeparator={true}
 									prefix={'$'}
 								/>
-								<div className='payment__note'>
-									For testing purposes: Enter 42424242... in
-									all of the credit card fields for payment
-									to be processed.
-								</div>
 								<button
 									disabled={
 										processing || disabled || succeeded
-									}>
+									}
+								>
 									<span>
 										{processing ? (
 											<p>Processing...</p>
@@ -197,8 +200,56 @@ function Payment() {
 										)}
 									</span>
 								</button>
+								<div className='payment__note'>
+									<div className='payment__note-item'>
+										<strong>
+											Successful Payment (Visa)
+										</strong>
+										<div>
+											Card Number: 4242 4242 4242 4242
+										</div>
+										<div>
+											Expiration Date: Any valid future date
+											(e.g., 12/34)
+										</div>
+										<div>CVC: Any 3 digits (e.g., 123)</div>
+										<div>
+											Zip Code: 94103 (San Francisco, CA)
+										</div>
+									</div>
+									<div className='payment__note-item'>
+										<strong>
+											Failed Payment (Insufficient Funds)
+										</strong>
+										<div>
+											Card Number: 4000 0000 0000 9995
+										</div>
+										<div>
+											Expiration Date: Any valid future date
+											(e.g., 12/34)
+										</div>
+										<div>CVC: Any 3 digits (e.g., 123)</div>
+										<div>
+											Zip Code: 94103 (San Francisco, CA)
+										</div>
+									</div>
+									<div className='payment__note-item'>
+										<strong>Card Declined</strong>
+										<div>
+											Card Number: 4000 0000 0000 0002
+										</div>
+										<div>
+											Expiration Date: Any valid future date
+											(e.g., 12/34)
+										</div>
+										<div>CVC: Any 3 digits (e.g., 123)</div>
+										<div>
+											Zip Code: 90210 (Beverly Hills, CA)
+										</div>
+									</div>
+								</div>
 							</div>
-							{error && <div>{error}</div>}
+							{error && <div>An error ocurred</div>}
 						</form>
 					</div>
 				</div>

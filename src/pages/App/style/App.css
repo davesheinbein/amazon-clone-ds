@@ -1,5 +1,4 @@
 .app {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-height: 100vh;
@@ -10,5 +9,4 @@
   .app {
     width: 100%;
   }
-}
-/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=App.css.map */

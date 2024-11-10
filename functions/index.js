@@ -9,7 +9,7 @@ const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
 const stripe = require('stripe')(
-	'sk_test_51HXuryAGYh1gFsyg8pQ7NHk9pxb9DIDmmYP8NRUqj0tNFnA2W5Kdbc2EIsvWteqrmbO1BH5au36NVwJ5IMTJz2Yt00DNYUSe1a'
+	''
 );
 
 // API

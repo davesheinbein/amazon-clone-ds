@@ -1,41 +1,42 @@
 .payment {
-  background-color: white;
+  background-color: #fff;
   min-height: 80vh;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .payment__container > h1 {
   text-align: center;
   padding: 10px;
   font-weight: 400;
-  background-color: #eaeded;
-  border-bottom: 1px solid lightgray;
+  background-color: #eaeaea;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
 }
 
 .payment__container > h1 a {
   text-decoration: none;
+  color: #007185;
 }
 
 .payment__section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 20px;
   margin: 0 20px;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #ccc;
 }
 
 .payment__title {
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
+  flex: 0.2;
+  font-weight: bold;
+  color: #333;
 }
 
 .payment__address,
 .payment__items,
 .payment__details {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
+  flex: 0.8;
 }
 
 .payment__details > form {
@@ -44,26 +45,43 @@
 
 .payment__details > h3 {
   padding-bottom: 20px;
+  color: #333;
 }
 
 .payment__card {
   padding-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .payment__note {
-  color: #555555;
-  font-size: 8px;
+  color: #555;
+  font-size: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.payment__note-item {
+  text-align: center;
+  padding: 10px 0;
 }
 
 .payment__details > form > div > button {
   background: #f0c14b;
-  border-radius: 2px;
+  border-radius: 4px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: 1px solid;
-  font-weight: bolder;
+  font-weight: bold;
   margin-top: 1em;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  transition: background 0.3s ease;
 }
-/*# sourceMappingURL=Payment.css.map */
+
+.payment__details > form > div > button:hover {
+  background: #ddb347;
+}/*# sourceMappingURL=Payment.css.map */
