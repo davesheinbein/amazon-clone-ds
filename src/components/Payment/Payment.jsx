@@ -53,6 +53,8 @@ function Payment() {
 					getBasketTotal(basket) * 100
 				}`,
 			});
+			console.log('🚀 ~ response:', response);
+			console.log('🚀 ~ response.data:', response.data);
 			setClientSecret(response.data.clientSecret);
 		};
 		getClientSecret();
@@ -67,8 +69,9 @@ function Payment() {
 		e.preventDefault();
 		setProcessing(true);
 
+		console.log('🚀 ~ clientSecret:', clientSecret);
 		if (!clientSecret) {
-			setError('Client secret not set');
+			setError(true);
 			setProcessing(false);
 			return;
 		}
@@ -84,6 +87,8 @@ function Payment() {
 			.then(({ paymentIntent }) => {
 				// paymentIntent de-structured from response
 				// paymentIntent = payment confirmation via stripe
+
+				console.log('Payment Intent:', paymentIntent);
 
 				// targeting the firestore db specifically the
 				// users collection within the db
@@ -112,8 +117,17 @@ function Payment() {
 					type: 'EMPTY_BASKET',
 				});
 
+				console.log('Payment succeeded:', paymentIntent);
+
 				history.replace('/orders');
+			})
+			.catch((error) => {
+				console.error('Payment failed:', error);
+				setError(error.message);
+				setProcessing(false);
 			});
+
+		console.log('🚀 ~ payload:', payload);
 	};
 
 	// Handles changes to the payment information
@@ -200,56 +214,113 @@ function Payment() {
 										)}
 									</span>
 								</button>
+								{error && (
+									<div className='payment__error'>
+										An error occurred
+									</div>
+								)}
 								<div className='payment__note'>
 									<div className='payment__note-item'>
-										<strong>
+										<div className='font-weight-900'>
 											Successful Payment (Visa)
-										</strong>
-										<div>
-											Card Number: 4242 4242 4242 4242
 										</div>
 										<div>
-											Expiration Date: Any valid future date
-											(e.g., 12/34)
+											<span className='font-weight-600'>
+												Card Number
+											</span>
+											<br />
+											4242 4242 4242 4242
 										</div>
-										<div>CVC: Any 3 digits (e.g., 123)</div>
 										<div>
-											Zip Code: 94103 (San Francisco, CA)
+											<span className='font-weight-600'>
+												Expiration Date
+											</span>
+											<br />
+											Any valid future date (e.g., 12/34)
+										</div>
+										<div>
+											<span className='font-weight-600'>
+												CVC
+											</span>
+											<br />
+											Any 3 digits (e.g., 123)
+										</div>
+										<div>
+											<span className='font-weight-600'>
+												Zip Code
+											</span>
+											<br />
+											94103 (San Francisco, CA)
 										</div>
 									</div>
 									<div className='payment__note-item'>
-										<strong>
+										<div className='font-weight-900'>
 											Failed Payment (Insufficient Funds)
-										</strong>
-										<div>
-											Card Number: 4000 0000 0000 9995
 										</div>
 										<div>
-											Expiration Date: Any valid future date
-											(e.g., 12/34)
+											<span className='font-weight-600'>
+												Card Number
+											</span>
+											<br />
+											4000 0000 0000 9995
 										</div>
-										<div>CVC: Any 3 digits (e.g., 123)</div>
 										<div>
-											Zip Code: 94103 (San Francisco, CA)
+											<span className='font-weight-600'>
+												Expiration Date
+											</span>
+											<br />
+											Any valid future date (e.g., 12/34)
+										</div>
+										<div>
+											<span className='font-weight-600'>
+												CVC
+											</span>
+											<br />
+											Any 3 digits (e.g., 123)
+										</div>
+										<div>
+											<span className='font-weight-600'>
+												Zip Code
+											</span>
+											<br />
+											94103 (San Francisco, CA)
 										</div>
 									</div>
 									<div className='payment__note-item'>
-										<strong>Card Declined</strong>
-										<div>
-											Card Number: 4000 0000 0000 0002
+										<div className='font-weight-900'>
+											Card Declined
 										</div>
 										<div>
-											Expiration Date: Any valid future date
-											(e.g., 12/34)
+											<span className='font-weight-600'>
+												Card Number
+											</span>
+											<br />
+											4000 0000 0000 0002
 										</div>
-										<div>CVC: Any 3 digits (e.g., 123)</div>
 										<div>
-											Zip Code: 90210 (Beverly Hills, CA)
+											<span className='font-weight-600'>
+												Expiration Date
+											</span>
+											<br />
+											Any valid future date (e.g., 12/34)
+										</div>
+										<div>
+											<span className='font-weight-600'>
+												CVC
+											</span>
+											<br />
+											Any 3 digits (e.g., 123)
+										</div>
+										<div>
+											<span className='font-weight-600'>
+												Zip Code
+											</span>
+											<br />
+											90210 (Beverly Hills, CA)
 										</div>
 									</div>
 								</div>
 							</div>
-							{error && <div>An error ocurred</div>}
 						</form>
 					</div>
 				</div>

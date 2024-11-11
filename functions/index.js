@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 // To start functions
 // firebase emulators:start
 // if you want to work with the backend must also change the
@@ -7,10 +5,31 @@ require('dotenv').config();
 
 // functions is the backend directory
 
-const functions = require('firebase-functions');
-const express = require('express');
-const cors = require('cors');
-const stripe = require('stripe')(process.env.STRIPESECRET);
+import functions from 'firebase-functions';
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import Stripe from 'stripe';
+
+// Load environment variables from .env file for local development
+dotenv.config();
+console.log(
+	'🚀 ~ process.env.STRIPESECRET:',
+	process.env.STRIPESECRET
+);
+console.log(
+	'🚀 ~ functions.config().stripe:',
+	functions.config().stripe
+);
+const stripeSecret =
+	process.env.STRIPESECRET ||
+	functions.config().stripe.secret;
+
+if (!stripeSecret) {
+	throw new Error('Stripe secret key is not defined');
+}
+
+const stripe = Stripe(stripeSecret);
 
 // API
 
@@ -33,7 +52,10 @@ app.post('/payments/create', async (request, response) => {
 	// --- you can use params as well
 	const total = request.query.total;
 
-	console.log('payment request received ->> Total:', total);
+	console.log(
+		'Payment Request Received for this amount >>> ',
+		total
+	);
 
 	const paymentIntent = await stripe.paymentIntents.create({
 		amount: total, // Subunits of the currency
@@ -46,6 +68,6 @@ app.post('/payments/create', async (request, response) => {
 });
 
 // Listen command
-exports.api = functions.https.onRequest(app);
+export const api = functions.https.onRequest(app);
 
 // http://localhost:5001/clone-ds/us-central1/api

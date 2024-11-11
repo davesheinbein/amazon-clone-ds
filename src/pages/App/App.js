@@ -22,33 +22,29 @@ import './style/App.css';
 
 // Stripe Publishable key https://dashboard.stripe.com/test/apikeys
 // promise that compiles and load stripe based on Key
-const promise = loadStripe(
-	'pk_test_51HXuryAGYh1gFsygAcbMQ6nNumpmFOFhQIUvLsoqKk1Z30xYMV6DAiPtjekVGt8fOo92Iu8oP4E2fNRP21hfi0rm00KGWwWewI'
-);
+const promise = loadStripe(process.env.REACT_APP_STRIPEKEY);
 
 function App() {
 	const [{}, dispatch] = useStateValue();
 
-	// will run one when app component loads
+	// will run once when app component loads
 	useEffect(() => {
 		auth.onAuthStateChanged((authUser) => {
-			// console.log(authUser, '<< authUser');
-
 			if (authUser) {
-				// the use just loggedIn / was loggedIn
+				// the user just logged in / was logged in
 				dispatch({
 					type: 'SET_USER',
 					user: authUser,
 				});
 			} else {
-				// the use loggedOut
+				// the user logged out
 				dispatch({
 					type: 'SET_USER',
 					user: null,
 				});
 			}
 		});
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<div className='app'>
